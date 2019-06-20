@@ -8,7 +8,7 @@ class TabLink {
     this.element.addEventListener('click', () => this.select()) // Add a click event listener on this instance, calling the select method on click
   };
   select() {
-    const links = this.element.querySelectorAll('.tabs-link') // Get all of the elements with the tabs-link class
+    const links = document.querySelectorAll('.tabs-link') // Get all of the elements with the tabs-link class
     links.forEach(t => { t.classList.remove('tabs-link-selected') }); // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
     this.element.classList.add('tabs-link-selected') // Add a class named "tabs-link-selected" to this link
     this.tabItem.select() // Call the select method on the item associated with this link
